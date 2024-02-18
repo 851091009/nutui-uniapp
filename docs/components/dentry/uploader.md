@@ -91,7 +91,7 @@ export default {
       //UploadFile  是 uni.uploadFile ， 你也可以自定义设置其它函数
       const uploadTask = UploadFile({
         url: options.url,
-        filePath: options.taroFilePath,
+        filePath: options.filePath,
         fileType: options.fileType,
         header: {
           'Content-Type': 'multipart/form-data',
@@ -111,7 +111,7 @@ export default {
         }
       });
       options.onStart?.(options);
-      uploadTask.progress((res: { progress: any; totalBytesSent: any; totalBytesExpectedToSend: any }) => {
+      uploadTask.onProgressUpdate((res: { progress: any; totalBytesSent: any; totalBytesExpectedToSend: any }) => {
         options.onProgress?.(res, options);
         // console.log('上传进度', res.progress);
         // console.log('已经上传的数据长度', res.totalBytesSent);
