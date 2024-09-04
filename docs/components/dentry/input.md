@@ -272,7 +272,7 @@ function onInputClick() {
 | click              | 点击组件时触发    | `(event: BaseEvent)`                        |
 | click-input        | 点击输入区域时触发  | `(event: BaseEvent)`                        |
 | confirm            | 点击完成按钮时触发  | `(event: InputOnConfirmEvent)`              |
-| input              | 键盘输入时触发    | `(value: string, event: InputOnInputEvent)` |
+| input              | 键盘输入时触发    | `(event: InputOnInputEvent, value: string)` |
 
 ### Slots
 
